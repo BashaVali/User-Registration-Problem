@@ -11,22 +11,30 @@ namespace UserRegistrationProblem
     {
         const string FIRST_NAME = "^[A-Z]{1}[a-z]{2,}$";
         const string LAST_NAME = "^[A-Z]{1}[a-z]{2,}$";
-        public void FirstName()
-        {
-            string input = Console.ReadLine();
-            if (Regex.IsMatch(input, FIRST_NAME))
-                Console.WriteLine("First Name - " + input);
-            else
-                Console.WriteLine("Invalid");
+        const string VALID_EMAIL = "^[a-z]{3,}[.]{0,1}[a-z]{0,}[@]{1}[a-z]{2,}[.]{1}[a-z]{2,}[.]{0,1}[a-z]{0,}$";
+            public void FirstName()
+            {
+                string input = Console.ReadLine();
+                if (Regex.IsMatch(input, FIRST_NAME))
+                    Console.WriteLine("Valid First Name - " + input);
+                else
+                    Console.WriteLine("Invalid");
+            }
+            public void LastName()
+            {
+                string input = Console.ReadLine();
+                if (Regex.IsMatch(input, LAST_NAME))
+                    Console.WriteLine("Valid Last Name - " + input);
+                else
+                    Console.WriteLine("Invalid");
+            }
+            public void ValidEmail()
+            {
+                string input = Console.ReadLine();
+                if (Regex.IsMatch(input, VALID_EMAIL))
+                    Console.WriteLine("Valid Email id - " + input);
+                else
+                    Console.WriteLine("Invalid");
+            }
         }
-        public void LastName()
-        {
-            string input = Console.ReadLine();
-            if (Regex.IsMatch(input, LAST_NAME))
-                Console.WriteLine("Last Name - " + input);
-            else
-                Console.WriteLine("Invalid");
-        }
-    }
-}
-        
+    }   

@@ -11,17 +11,21 @@ namespace UserRegistrationProblem
             while (choice)
             {
                 Console.WriteLine("Enter your choice");
-                Console.WriteLine("1. Enter First Name \n2. Enter Last Name \n3. Exit");
+                Console.WriteLine("1. Enter First Name\n2. Enter Last Name\n3. Enter Email ID\n4. Exit");
                 int condition = Convert.ToInt32(Console.ReadLine());
                 switch (condition)
                 {
                     case 1:
-                        Console.WriteLine("Enter First Name - ");
+                        Console.WriteLine("Enter Name - ");
                         user.FirstName();
                         break;
                     case 2:
-                        Console.WriteLine("Enter SurnameLast Name - ");
+                        Console.WriteLine("Enter Surname - ");
                         user.LastName();
+                        break;
+                    case 3:
+                        Console.WriteLine("Enter Email ID - ");
+                        user.ValidEmail();
                         break;
                     default:
                         Console.WriteLine("Oops,Try Again!");
